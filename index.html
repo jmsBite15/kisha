@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 A Special Question For You 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hearts-bg" id="heartsBg"></div>
+    
+    <div class="container" id="container">
+        <div class="card">
+            <!-- Screen 1: Initial Question -->
+            <div class="screen active" id="screen1">
+                <div class="gif-container">
+                    <img id="gif1" src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" alt="Cute love gif">
+                </div>
+                <h1>Will you be my Valentine? 💖</h1>
+                <div class="buttons">
+                    <button class="btn btn-yes" id="yesBtn1" onclick="goToScreen(2)">Yes</button>
+                    <button class="btn btn-no-inline" id="noBtn1" onclick="handleNoClick(1)">No</button>
+                </div>
+            </div>
+
+            <!-- Screen 2: Confirmation -->
+            <div class="screen" id="screen2">
+                <div class="gif-container">
+                    <img id="gif2" src="gif2/g1.gif" alt="Excited gif">
+                </div>
+                <h1>Yes, 100% sure na hah?? 🥺</h1>
+                <div class="buttons">
+                    <button class="btn btn-yes" id="yesBtn2" onclick="goToScreen(3)">Yes, 100% sure</button>
+                    <button class="btn btn-no-inline" id="noBtn2" onclick="handleNoClick(2)">Um let me think…</button>
+                </div>
+            </div>
+
+            <!-- Screen 3: Promise -->
+            <div class="screen" id="screen3">
+                <div class="gif-container">
+                    <img src="prom.gif" alt="Promise gif">
+                </div>
+                <h1>Promise me you will always be my Valentine 💖</h1>
+                <div class="buttons">
+                    <button class="btn btn-single" onclick="showFinal()">Yes, I promise</button>
+                </div>
+            </div>
+
+            <!-- Screen 4: Final Celebration -->
+            <div class="screen" id="screen4">
+                <div class="gif-container">
+                    <img src="I Love You Kiss GIF.gif" alt="Happy love gif">
+                </div>
+                <p class="final-message">
+                    Yay! 🎉<br>
+                    You're my Valentine!<br>
+                    <span class="sparkle">I love you so much 💕</span>
+                </p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="celebration-hearts" id="celebrationHearts"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
