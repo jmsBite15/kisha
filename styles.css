@@ -292,3 +292,170 @@ h1 {
         transform: scale(1.1);
     }
 }
+
+/* Final screen buttons */
+.final-buttons {
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.btn-special {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.5);
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+.btn-special:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(255, 105, 180, 0.7);
+}
+
+.btn-back {
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    color: white;
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+.btn-back:hover {
+    transform: scale(1.05);
+}
+
+/* Video container */
+.video-container {
+    width: 100%;
+    max-width: 350px;
+    max-height: 500px;
+    margin: 0 auto 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    display: block;
+    object-fit: contain;
+}
+
+/* Gallery styles */
+.gallery-title {
+    font-family: 'Pacifico', cursive;
+    color: #ff1493;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.year-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #ffb6c1;
+    color: #ff1493;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+}
+
+.tab-btn:hover {
+    transform: scale(1.05);
+}
+
+.gallery-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.year-gallery {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.year-gallery.active {
+    display: grid;
+}
+
+.year-gallery img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 2px solid #ffb6c1;
+}
+
+.year-gallery img:hover {
+    transform: scale(1.05);
+    border-color: #ff1493;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile responsive for gallery */
+@media (max-width: 480px) {
+    .year-gallery img {
+        height: 70px;
+    }
+    
+    .gallery-container {
+        max-height: 200px;
+    }
+    
+    .tab-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+}

@@ -319,6 +319,46 @@ function createCelebrationHearts() {
     });
 }
 
+// Show Video screen
+function showVideo() {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('screen5').classList.add('active');
+}
+
+// Show Pictures screen
+function showPictures() {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('screen6').classList.add('active');
+}
+
+// Switch between year tabs
+function showYear(year) {
+    // Update tab buttons
+    document.querySelectorAll('.tab-btn').forEach((btn, index) => {
+        btn.classList.remove('active');
+        if (index === year - 1) btn.classList.add('active');
+    });
+    
+    // Update gallery
+    document.querySelectorAll('.year-gallery').forEach(gallery => {
+        gallery.classList.remove('active');
+    });
+    document.getElementById('year' + year).classList.add('active');
+}
+
+// Open lightbox for full size picture
+function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    lightbox.classList.add('active');
+}
+
+// Close lightbox
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     // Create floating hearts background

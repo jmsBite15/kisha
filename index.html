@@ -55,9 +55,61 @@
                 <p class="final-message">
                     Yay! 🎉<br>
                     You're my Valentine!<br>
-                    <span class="sparkle">I love you so much 💕</span>
+                    <span class="sparkle">I love you so much lannggg 💕</span>
                 </p>
+                <div class="buttons final-buttons">
+                    <button class="btn btn-special" onclick="showVideo()">🎬 View our Video</button>
+                    <button class="btn btn-special" onclick="showPictures()">📸 Our Pictures</button>
+                </div>
             </div>
+
+            <!-- Screen 5: Video Screen -->
+            <div class="screen" id="screen5">
+                <div class="video-container">
+                    <video id="ourVideo" controls>
+                        <source src="ourvideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <button class="btn btn-back" onclick="goToScreen(4)">← Back</button>
+            </div>
+
+            <!-- Screen 6: Pictures Gallery -->
+            <div class="screen" id="screen6">
+                <h1 class="gallery-title">Our Memories 💕</h1>
+                <div class="year-tabs">
+                    <button class="tab-btn active" onclick="showYear(1)">Year 1</button>
+                    <button class="tab-btn" onclick="showYear(2)">Year 2</button>
+                    <button class="tab-btn" onclick="showYear(3)">Year 3</button>
+                </div>
+                <div class="gallery-container">
+                    <div class="year-gallery active" id="year1">
+                        <!-- Add your Year 1 pictures here -->
+                        <img src="img/year1/pic1.jpg" alt="Year 1" onclick="openLightbox(this.src)">
+                        <img src="img/year1/pic2.jpg" alt="Year 1" onclick="openLightbox(this.src)">
+                        <img src="img/year1/pic3.jpg" alt="Year 1" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="year-gallery" id="year2">
+                        <!-- Add your Year 2 pictures here -->
+                        <img src="img/year2/pic1.jpg" alt="Year 2" onclick="openLightbox(this.src)">
+                        <img src="img/year2/pic2.jpg" alt="Year 2" onclick="openLightbox(this.src)">
+                        <img src="img/year2/pic3.jpg" alt="Year 2" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="year-gallery" id="year3">
+                        <!-- Add your Year 3 pictures here -->
+                        <img src="img/year3/pic1.jpg" alt="Year 3" onclick="openLightbox(this.src)">
+                        <img src="img/year3/pic2.jpg" alt="Year 3" onclick="openLightbox(this.src)">
+                        <img src="img/year3/pic3.jpg" alt="Year 3" onclick="openLightbox(this.src)">
+                    </div>
+                </div>
+                <button class="btn btn-back" onclick="goToScreen(4)">← Back</button>
+            </div>
+        </div>
+
+        <!-- Lightbox for viewing pictures -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <span class="close-btn">&times;</span>
+            <img id="lightbox-img" src="" alt="Full size">
         </div>
         </div>
     </div>
